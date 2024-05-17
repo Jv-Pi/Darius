@@ -7,10 +7,9 @@
   "use strict";
 
   var cfg = {
-      scrollDuration: 800, // smoothscroll duration
-      mailChimpURL:
-        "https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc", // mailchimp url
-    },
+    scrollDuration: 800, // smoothscroll duration
+    mailChimpURL: "https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc", // mailchimp url
+  },
     $WIN = $(window);
 
   // Add the User Agent to the <html>
@@ -115,10 +114,9 @@
 
       $("html, body")
         .stop()
-        .animate(
-          {
-            scrollTop: $target.offset().top,
-          },
+        .animate({
+          scrollTop: $target.offset().top,
+        },
           cfg.scrollDuration,
           "swing",
           function () {
@@ -135,7 +133,7 @@
   };
 
   /* Alert Boxes
-  	------------------------------------------------------- */
+    ------------------------------------------------------- */
   var ssAlertBoxes = function () {
     $(".alert-box").on("click", ".close", function () {
       $(this).parent().fadeOut(500);
@@ -239,3 +237,32 @@
     });
   });
 })(jQuery);
+(function () {
+  emailjs.init("qik4YWAKLRTvRhTT8"); // Substitua pelo seu User ID
+})();
+
+document.getElementById("mc-form").addEventListener("submit", function (event) {
+  event.preventDefault(); // Impede o envio padrão do formulário
+
+  // Coletar os dados do formulário
+  var email = document.getElementById("mc-email").value;
+
+  // Configurar os parâmetros do e-mail
+  var templateParams = {
+    email: email,
+  };
+
+  // Enviar o e-mail usando EmailJS
+  emailjs.send("service_e6esy8t", "template_qzqogwv", templateParams).then(
+    function (response) {
+      console.log("SUCCESS!", response.status, response.text);
+      document.querySelector(".subscribe-message").innerText =
+        "Obrigado por se inscrever!";
+    },
+    function (error) {
+      console.error("FAILED...", error);
+      document.querySelector(".subscribe-message").innerText =
+        "Ocorreu um erro ao enviar seu e-mail. Tente novamente mais tarde.";
+    }
+  );
+});

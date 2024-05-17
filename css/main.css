@@ -762,7 +762,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
     border: none;
-    -webkit-text-fill-color: #FF7E00;
+    -webkit-text-fill-color: #F66802;
     transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -783,7 +783,6 @@ input[type="button"] {
     height: 5.4rem;
     line-height: calc(5.4rem - .6rem);
     padding: 0 3rem;
-    margin: 0 .3rem 1.2rem 0;
     color: #222222;
     text-decoration: none;
     cursor: pointer;
@@ -3054,10 +3053,9 @@ footer ul a:visited {
         display: none;
     }
     .footer-main ul.list-links {
-        width: 80%;
+        width: 100%;
         display: block;
-        margin-left: auto;
-        margin-right: auto;
+        text-align: center;
     }
     .footer-main ul.list-links li a {
         display: block;
@@ -3071,6 +3069,11 @@ footer ul a:visited {
     .footer-site-links,
     .footer-subscribe {
         text-align: center;
+    }
+    .footer-contact,
+    p {
+        text-align: center;
+        margin: 0!important;
     }
     .footer-bottom {
         padding-bottom: .6rem;
