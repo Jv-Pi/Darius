@@ -101,7 +101,7 @@
                 <a href="https://www.instagram.com/dariuscanavarros" target="_blank"><i class="fa fa-instagram"></i></a>
             </li>
             <li>
-                <a href="mailto:joaotei7@hotmail.com"><i class="fa fa-envelope"></i></i>
+                <a class="smoothscroll" href="#contact"><i class="fa fa-envelope"></i></i>
                 </a>
             </li>
         </ul>
@@ -140,7 +140,20 @@
 
                 </p>
             </div>
-
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-6 sm-margin-five-bottom sm-padding-ten-left xs-padding-15px-left xs-margin-30px-bottom text-center wow fadeInDown">
+                    <h5 class="font-weight-600 no-margin timer alt-font appear contagem plus-sign" data-speed="2000" data-to="40">20</h5>
+                    <span class="display-block margin-three-bottom ">Anos de experiência</span>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6 sm-margin-five-bottom sm-padding-ten-left xs-padding-15px-left xs-margin-30px-bottom text-center wow fadeInDown">
+                    <h5 class="font-weight-600 no-margin timer alt-font appear contagem plus-sign" data-speed="2000" data-to="40">458</h5>
+                    <span class="display-block margin-three-bottom">Casos Vencidos</span>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6 sm-margin-five-bottom sm-padding-ten-left xs-padding-15px-left xs-margin-30px-bottom text-center wow fadeInDown">
+                    <h5 class="font-weight-600 no-margin timer alt-font appear contagem plus-sign" data-speed="2000" data-to="40">600</h5>
+                    <span class="display-block margin-three-bottom">Clientes</span>
+                </div>
+            </div>
         </div>
 
         <div class="row about-features">
@@ -219,10 +232,8 @@
                 </div>
             </div>
             <div class="col-eight">
-                <p class="lead aos-init aos-animate" data-aos="fade-up" style="margin-left: 85px;margin-top: -9px;">
 
-                </p>
-                <ul class="listPerfil">
+                <ul class="lead aos-init aos-animate listPerfil" data-aos="fade-up">
                     <li>Graduado em Direito pela Universidade Federal de Uberlândia UFU (2000);</li>
                     <li>Pós-Graduado em Direito Tributário pela PUC/Campinas (2002);</li>
                     <li>Pós-Graduado em Planejamento Tributário pela FGV/SP (2009);</li>
@@ -332,35 +343,27 @@
         <div class="row">
 
             <div class="col tab-full">
+                <h1>Contact</h1>
+                <form>
+                    <div>
+                        <label for="sampleInput">Título do Assunto</label>
+                        <input class="full-width" type="text" placeholder="Name" id="subject">
+                    </div>
+                    <div>
+                        <label for="sampleInput">Para</label>
+                        <input class="full-width" type="text" placeholder="Canavarros Palma Advocacia" id="to" disabled value="Canavarros Palma Advocacia">
+                    </div>
+                    <div>
+                        <label for="sampleInput">Name</label>
+                        <input class="full-width" type="text" placeholder="Name" id="sendername">
+                    </div>
+                    <label for="exampleMessage">Message</label>
+                    <textarea class="full-width" placeholder="Your message" id="message"></textarea>
+                    </label>
 
-                <h1>Contact</h>
-                    <!--                     <form id="contact-form">
-                        <div>
-                            <label for="sampleInput">Your email</label>
-                            <input class="full-width" type="email" placeholder="test@mailbox.com" id="sampleInput" name="user_email" required>
-                        </div>
-                        <div>
-                            <label for="sampleRecipientInput">Reason for contacting</label>
-                            <div class="ss-custom-select">
-                                <select class="full-width" id="sampleRecipientInput" name="contact_reason">
-                                    <option value="Questions">Questions</option>
-                                    <option value="Report">Report</option>
-                                    <option value="Others">Others</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div>
-                            <label for="exampleMessage">Message</label>
-                            <textarea class="full-width" placeholder="Your message" id="exampleMessage" name="message" required></textarea>
-                        </div>
-                        <div>
-                            <label class="add-bottom">
-                                <input type="checkbox" id="sendCopy" name="send_copy">			            
-                                <span class="label-text">Send a copy to yourself</span>
-                            </label>
-                        </div>
-                        <input class="button-primary" type="submit" value="Submit">
-                    </form> -->
+                    <input class="button-primary" onclick="sendEmail()" type="submit" value="Submit">
+
+                </form>
             </div>
         </div>
     </section>
@@ -394,7 +397,7 @@
 
                 <div class="col-three md-1-3 tab-1-2 mob-full footer-contact">
 
-                    <h4>Contato</h4>
+                    <h4>Mapa</h4>
 
                     <p>
                         Av. Filinto Muller, n. 35,<br> Ed. Sarat, Sala 27,<br> Bairro Jardim Cuiabá, Cuiabá - MT <br> 78043-400 <br>
@@ -402,7 +405,7 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61493.2280064026!2d-56.12416741348653!3d-15.574181518988745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x939db1efe3869ff3%3A0xcb8d59681ee229da!2sEdif%C3%ADcio%20Sarat!5e0!3m2!1spt-BR!2sbr!4v1715955661210!5m2!1spt-BR!2sbr"
                         width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <p>
-                        darius@canavarros.com.br<br> Telefone: +55 (65) 99972-5131
+                        Telefone: +55 (65) 99972-5131
                     </p>
 
                 </div>
@@ -416,7 +419,7 @@
                         <li><a href="#home">Inicio</a></li>
                         <li><a href="#about">Sobre</a></li>
                         <li><a href="#perfilProfissional">Perfil Profissional</a></li>
-                        <li><a href="#Especialidades">Testemunhal</a></li>
+                        <li><a href="#Especialidades">Especialidades</a></li>
                         <li><a href="#contact">Contato</a></li>
                     </ul>
                 </div>
@@ -453,7 +456,7 @@
                 <div class="col-twelve">
                     <div class="copyright">
                         <span>© Copyright CO Digital 2024.</span>
-                        <span>Design by <a href="https://github.com/Jv-Pi">João V Pires</a></span>
+                        <!-- <span>Design by <a href="https://github.com/Jv-Pi">João V Pires</a></span> -->
                     </div>
 
                     <div id="go-top">

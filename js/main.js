@@ -7,9 +7,10 @@
   "use strict";
 
   var cfg = {
-    scrollDuration: 800, // smoothscroll duration
-    mailChimpURL: "https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc", // mailchimp url
-  },
+      scrollDuration: 800, // smoothscroll duration
+      mailChimpURL:
+        "https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc", // mailchimp url
+    },
     $WIN = $(window);
 
   // Add the User Agent to the <html>
@@ -114,9 +115,10 @@
 
       $("html, body")
         .stop()
-        .animate({
-          scrollTop: $target.offset().top,
-        },
+        .animate(
+          {
+            scrollTop: $target.offset().top,
+          },
           cfg.scrollDuration,
           "swing",
           function () {
@@ -220,22 +222,6 @@
     // function call ssAjaxChimp() below:
     // ssAjaxChimp();
   })();
-  document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll(".header-main-nav");
-
-    navLinks.forEach((link) => {
-      link.addEventListener("click", function (event) {
-        event.preventDefault();
-        const targetId = this.getAttribute("href").substring(1);
-        const targetSection = document.getElementById(targetId);
-
-        window.scrollTo({
-          top: targetSection.offsetTop,
-          behavior: "smooth",
-        });
-      });
-    });
-  });
 })(jQuery);
 (function () {
   emailjs.init("qik4YWAKLRTvRhTT8"); // Substitua pelo seu User ID
@@ -262,7 +248,46 @@ document.getElementById("mc-form").addEventListener("submit", function (event) {
     function (error) {
       console.error("FAILED...", error);
       document.querySelector(".subscribe-message").innerText =
-        "Ocorreu um erro ao enviar seu e-mail. Tente novamente mais tarde.";
+        "Ocorreu um erro ao enviar seu e-mail. Tente novamente com outro e-mail.";
     }
   );
+});
+
+function sendEmail() {
+  var params = {
+    sendername: $("#sendername").val(),
+    to: "joaotei7@hotmail.com",
+    subject: $("#subject").val(),
+    replyto: $("#replyto").val(),
+    message: $("#message").val(),
+  };
+  var serviceID = "service_e6esy8t";
+  var templateID = "template_kt0nj3f";
+
+  emailjs
+    .send(serviceID, templateID, params)
+    .then((res) => {
+      alert("Email enviado com sucesso");
+    })
+    .catch((err) => {
+      console.error("Erro ao enviar email:", err);
+      alert("Falha ao enviar email. Por favor, tente novamente.");
+    });
+}
+
+$(".contagem").each(function () {
+  $(this)
+    .prop("Counter", 0)
+    .animate(
+      {
+        Counter: $(this).text(),
+      },
+      {
+        duration: 5000,
+        easing: "swing",
+        step: function (now) {
+          $(this).text(Math.ceil(now));
+        },
+      }
+    );
 });

@@ -426,10 +426,9 @@ textarea {
 }
 
 .row .row {
-    width: auto;
     max-width: none;
-    margin-left: -20px;
-    margin-right: -20px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 [class*="col-"],
