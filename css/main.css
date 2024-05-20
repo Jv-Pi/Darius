@@ -1993,10 +1993,13 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 
 .about-features .features-list {
     padding-top: 5.4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .about-features .feature {
     margin-bottom: 1.8rem;
+    width: auto;
 }
 
 .about-features .feature .icon {
