@@ -1191,6 +1191,7 @@ h1.intro-header {
     color: #151515;
     position: relative;
     padding-bottom: 3.6rem;
+    text-align: center;
 }
 
 h1.intro-header::before {
@@ -1525,9 +1526,6 @@ h1.intro-header::before {
 @media only screen and (min-width: 769px) {
     #header-nav-wrap {
         display: block !important;
-    }
-    .header-logo-over {
-        margin-top: 80%;
     }
 }
 
@@ -2009,6 +2007,13 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
     background: #ffffff;
     padding-top: 18rem;
     overflow: hidden;
+}
+
+#about h1::before {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
 
 .about-intro {
