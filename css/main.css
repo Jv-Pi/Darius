@@ -1460,6 +1460,9 @@ h1.intro-header::before {
         height: 20px;
         background-size: 88px 20px;
     }
+    .header-logo-over {
+        margin-top: 80%;
+    }
     #header-nav-wrap {
         display: none;
         height: auto;
@@ -1500,11 +1503,17 @@ h1.intro-header::before {
         display: block;
         padding: 0 20px;
     }
+    .header-logo-over {
+        margin-top: 80%;
+    }
 }
 
 @media only screen and (max-width: 400px) {
     .header-menu-toggle {
         right: 24px;
+    }
+    .header-logo-over {
+        margin-top: 80%;
     }
 }
 
@@ -1516,6 +1525,9 @@ h1.intro-header::before {
 @media only screen and (min-width: 769px) {
     #header-nav-wrap {
         display: block !important;
+    }
+    .header-logo-over {
+        margin-top: 80%;
     }
 }
 
