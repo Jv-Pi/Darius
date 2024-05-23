@@ -1878,7 +1878,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
         font-size: 1.5rem;
     }
     .imgSobre {
-        width: 80%;
+        width: 100% !important;
         display: block;
         margin: 0 auto;
     }
@@ -1919,7 +1919,8 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
         margin-bottom: 3.6rem;
     }
     .imgSobre {
-        width: 80%;
+        width: 100% !important;
+        ;
         display: block;
         margin: 0 auto;
     }
