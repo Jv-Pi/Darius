@@ -1654,9 +1654,9 @@ h1.intro-header::before {
 }
 
 .imgSobre {
-    width: 760px !important;
+    width: 350px !important;
     border-radius: 10px;
-    height: 500px;
+    height: 350px;
 }
 
 .imgProfissional {
