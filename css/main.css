@@ -1425,7 +1425,7 @@ h1.intro-header::before {
     top: 50%;
     right: auto;
     bottom: auto;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     font: 0/0 a;
@@ -1461,7 +1461,7 @@ h1.intro-header::before {
 
 .header-menu-toggle.is-clicked span::before,
 .header-menu-toggle.is-clicked span::after {
-    background-color: white;
+    background-color: rgb(0, 0, 0);
 }
 
 .header-menu-toggle.is-clicked span::before {
@@ -1511,12 +1511,12 @@ h1.intro-header::before {
 
 #header-nav-wrap .header-main-nav li a,
 #header-nav-wrap .header-main-nav li a:visited {
-    color: rgba(0, 0, 0, 0.5);
+    color: rgb(0, 0, 0);
 }
 
 #header-nav-wrap .header-main-nav li a:hover,
 #header-nav-wrap .header-main-nav li a:focus {
-    color: #000000;
+    color: #FF7E00;
 }
 
 #header-nav-wrap .header-main-nav li.current a {
@@ -1548,9 +1548,8 @@ h1.intro-header::before {
 
 @media only screen and (max-width: 768px) {
     .header-logo a {
-        width: 88px;
-        height: 20px;
-        background-size: 88px 20px;
+        width: 200px;
+        height: 100px;
     }
     .header-logo-over {
         margin-top: 80%;
@@ -1568,20 +1567,20 @@ h1.intro-header::before {
         width: 100%;
         right: auto;
         left: 0;
-        background-color: #111111;
+        background-color: #ffffff;
         padding: 120px 40px 54px;
     }
     #header-nav-wrap .header-main-nav {
         display: block;
         height: auto;
         margin: 0 0 4.2rem 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.03);
+        border-bottom: 1px solid rgb(0 0 0 / 20%);
     }
     #header-nav-wrap .header-main-nav li {
         display: block;
         margin: 0;
         padding: 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        border-bottom: 1px solid rgb(0 0 0 / 20%);
     }
     #header-nav-wrap .header-main-nav li a {
         padding: 18px 0;

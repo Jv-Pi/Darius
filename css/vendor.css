@@ -1184,6 +1184,39 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
  *  Owl Carousel - Core
  */
 
+.owl-nav button {
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 5px;
+}
+
+.owl-nav button:hover {
+    background: #f0f0f0;
+    border-color: #999;
+}
+
+.owl-dots .owl-dot {
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    background: #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.owl-dots .owl-dot.active {
+    background: #333;
+}
+
+.owl-dots {
+    display: flex;
+    justify-content: center;
+}
+
 .owl-carousel {
     display: none;
     width: 100%;
