@@ -1814,6 +1814,7 @@ h1.intro-header::before {
 /* scroll down */
 
 .listPerfil {
+    list-style: none;
     margin-left: 85px;
     margin-top: -9px;
 }

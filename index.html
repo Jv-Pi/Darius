@@ -589,23 +589,20 @@
         });
         document.addEventListener("DOMContentLoaded", function() {
             function changeImageSource() {
-                var parallaxSlider = document.querySelector('.parallax-slider');
-                if (!parallaxSlider) {
-                    console.error("Elemento com o ID 'parallax-slider' não encontrado.");
+                var parallaxSection = document.getElementById('home');
+                if (!parallaxSection) {
+                    console.error("Elemento com o ID 'home' não encontrado.");
                     return;
                 }
-
-                console.log("Largura da janela: " + window.innerWidth);
-
                 if (window.innerWidth <= 768) { // Exemplo de breakpoint para responsivo
-                    parallaxSlider.src = "images/canavarrosmobile.jpg";
-                    parallaxSlider.classList.add('responsive-image');
-                    console.log("Imagem de fundo alterada para a versão móvel.");
+                    parallaxSection.setAttribute('data-image-src', 'images/canavarrosmobile.jpg');
                 } else {
-                    parallaxSlider.src = "images/hero-bg2.jpg";
-                    parallaxSlider.classList.remove('responsive-image');
-                    console.log("Imagem de fundo alterada para a versão desktop.");
+                    parallaxSection.setAttribute('data-image-src', 'images/hero-bg2.jpg');
                 }
+
+                // Atualiza o background-image usando o atributo data-image-src
+                var imageUrl = parallaxSection.getAttribute('data-image-src');
+                parallaxSection.style.backgroundImage = 'url(' + imageUrl + ')';
             }
 
             // Execute a função quando a página carregar
