@@ -68,7 +68,7 @@
 
     <!-- home
    ================================================== -->
-    <section id="home" data-parallax="scroll" data-image-src="images/hero-bg2.jpg" class="responsive-image" data-natural-width=1920 data-natural-height=785>
+    <section id="home" data-parallax="scroll" data-image-src="" style="background-size: cover;">
 
         <div class="overlay"></div>
         <div class="home-content">
@@ -590,17 +590,36 @@
         document.addEventListener("DOMContentLoaded", function() {
             function changeImageSource() {
                 var parallaxSection = document.getElementById('home');
+
                 if (!parallaxSection) {
                     console.error("Elemento com o ID 'home' não encontrado.");
                     return;
                 }
-                if (window.innerWidth <= 768) { // Exemplo de breakpoint para responsivo
+
+                console.log("Largura da janela: " + window.innerWidth);
+
+
+                if (window.innerWidth <= 500) {
                     parallaxSection.setAttribute('data-image-src', 'images/canavarrosmobile.jpg');
+                    console.log("Imagem de fundo alterada para a versão móvel (500px).");
+                } else if (window.innerWidth <= 600) {
+                    parallaxSection.setAttribute('data-image-src', 'images/canavarrosmobile.jpg');
+                    console.log("Imagem de fundo alterada para a versão móvel (600px).");
+                } else if (window.innerWidth <= 900) {
+                    parallaxSection.setAttribute('data-image-src', 'images/canavarrosmobile.jpg');
+                    console.log("Imagem de fundo alterada para a versão móvel (900px).");
+                } else if (window.innerWidth <= 1300) {
+                    parallaxSection.setAttribute('data-image-src', 'images/canavarrosmobile.jpg');
+                    console.log("Imagem de fundo alterada para a versão móvel (1300px).");
+                } else if (window.innerWidth <= 1400) {
+                    parallaxSection.setAttribute('data-image-src', 'images/canavarrosmobile.jpg');
+                    console.log("Imagem de fundo alterada para a versão móvel (1300px).");
                 } else {
                     parallaxSection.setAttribute('data-image-src', 'images/hero-bg2.jpg');
+                    console.log("Imagem de fundo alterada para a versão desktop.");
                 }
 
-                // Atualiza o background-image usando o atributo data-image-src
+                // Atualiza o background-image do parallaxSection usando o atributo data-image-src
                 var imageUrl = parallaxSection.getAttribute('data-image-src');
                 parallaxSection.style.backgroundImage = 'url(' + imageUrl + ')';
             }
