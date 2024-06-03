@@ -1658,6 +1658,13 @@ h1.intro-header::before {
     /* IE6-9 */
 }
 
+.responsive-image {
+    width: 100% !important;
+    left: 0 !important;
+    height: 280px !important;
+    object-fit: cover;
+}
+
 #home .overlay {
     position: absolute;
     top: 0;
@@ -1994,8 +2001,9 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 
 @media only screen and (max-width: 1024px) {
     .home-content-left {
-        width: 60%;
-        padding: 18rem 6rem 12rem 4rem;
+        width: 100%;
+        padding: 50rem 6rem 12rem 4rem;
+        justify-content: space-around;
     }
     .home-content-left h3 {
         font-size: 1.5rem;
@@ -2035,7 +2043,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
     .home-content-left {
         width: 94%;
         position: static;
-        padding: 15rem 6rem 366px;
+        padding: 19rem 6rem 366px;
         margin: 0 auto;
     }
     .home-content-left h1 {
@@ -2075,7 +2083,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 
 @media only screen and (max-width: 600px) {
     .home-content-left {
-        padding: 12rem 6rem 366px;
+        padding: 20rem 6rem 366px;
     }
     .home-content-left h1 {
         font-size: 3.3rem;
@@ -2100,7 +2108,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
         display: none;
     }
     .home-content-left {
-        padding: 12rem 2.5rem 366px;
+        padding: 20rem 2.5rem 366px;
         width: 100%;
     }
     .home-content-left h1 {
@@ -2110,7 +2118,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 
 @media only screen and (max-width: 400px) {
     .home-content-left {
-        padding: 12rem 0 300px;
+        padding: 20rem 0 0;
     }
     .home-content-left .button.stroke {
         margin: 0 0 1.2rem 0;
@@ -2794,12 +2802,6 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 #testimonial-slider .owl-dots {
     text-align: center;
     -webkit-tap-highlight-color: transparent;
-}
-
-#testimonial-slider .owl-dots .owl-dot {
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
 }
 
 #testimonial-slider .owl-dots .owl-dot span {
