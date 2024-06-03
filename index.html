@@ -68,7 +68,7 @@
 
     <!-- home
    ================================================== -->
-    <section id="home" data-parallax="scroll" data-image-src="" style="background-size: cover;">
+    <section id="home" data-parallax="scroll" class="parallax-slider" style="background-size: cover;">
 
         <div class="overlay"></div>
         <div class="home-content">
@@ -590,32 +590,41 @@
         document.addEventListener("DOMContentLoaded", function() {
             function changeImageSource() {
                 var parallaxSection = document.getElementById('home');
+                var parallaxImages = document.getElementsByClassName('parallax-image');
 
                 if (!parallaxSection) {
                     console.error("Elemento com o ID 'home' não encontrado.");
                     return;
                 }
 
+                if (parallaxImages.length === 0) {
+                    console.error("Elementos com a classe 'parallax-image' não encontrados.");
+                    return;
+                }
+
+                var parallaxImage = parallaxImages[0];
+
                 console.log("Largura da janela: " + window.innerWidth);
 
-
                 if (window.innerWidth <= 500) {
-                    parallaxSection.setAttribute('data-image-src', 'images/canavarrosmobile.jpg');
+                    parallaxSection.setAttribute('data-image-src', 'images/canavarrosmobile-500.jpg');
+                    parallaxImage.src = 'images/canavarrosmobile-500.jpg';
                     console.log("Imagem de fundo alterada para a versão móvel (500px).");
                 } else if (window.innerWidth <= 600) {
-                    parallaxSection.setAttribute('data-image-src', 'images/canavarrosmobile.jpg');
+                    parallaxSection.setAttribute('data-image-src', 'images/canavarrosmobile-600.jpg');
+                    parallaxImage.src = 'images/canavarrosmobile-600.jpg';
                     console.log("Imagem de fundo alterada para a versão móvel (600px).");
                 } else if (window.innerWidth <= 900) {
-                    parallaxSection.setAttribute('data-image-src', 'images/canavarrosmobile.jpg');
+                    parallaxSection.setAttribute('data-image-src', 'images/canavarrosmobile-900.jpg');
+                    parallaxImage.src = 'images/canavarrosmobile-900.jpg';
                     console.log("Imagem de fundo alterada para a versão móvel (900px).");
                 } else if (window.innerWidth <= 1300) {
-                    parallaxSection.setAttribute('data-image-src', 'images/canavarrosmobile.jpg');
-                    console.log("Imagem de fundo alterada para a versão móvel (1300px).");
-                } else if (window.innerWidth <= 1400) {
-                    parallaxSection.setAttribute('data-image-src', 'images/canavarrosmobile.jpg');
+                    parallaxSection.setAttribute('data-image-src', 'images/canavarrosmobile-1300.jpg');
+                    parallaxImage.src = 'images/canavarrosmobile-1300.jpg';
                     console.log("Imagem de fundo alterada para a versão móvel (1300px).");
                 } else {
                     parallaxSection.setAttribute('data-image-src', 'images/hero-bg2.jpg');
+                    parallaxImage.src = 'images/hero-bg2.jpg';
                     console.log("Imagem de fundo alterada para a versão desktop.");
                 }
 
