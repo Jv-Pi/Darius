@@ -1795,7 +1795,7 @@ h1.intro-header::before {
 }
 
 .imgProfissional {
-    width: 355px !important;
+    width: 460px !important;
     border-radius: 10px;
 }
 
@@ -1993,6 +1993,66 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
  * home section 
  * ------------------------------------------------------------------- */
 
+@media only screen and (max-width: 1800px) {
+    .responsive-image {
+        width: 100%;
+        height: auto;
+    }
+    .parallax-slider {
+        width: 100% !important;
+        height: 40vh !important;
+        /* Ajuste conforme necessário */
+        background-image: url("../images/canavarrosmobile.jpg") !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .responsive-image {
+        width: 100%;
+        height: auto;
+    }
+    .parallax-slider {
+        width: 100% !important;
+        height: 40vh !important;
+        /* Ajuste conforme necessário */
+        background-image: url("../images/canavarrosmobile.jpg") !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+}
+
+@media only screen and (max-width: 999px) {
+    .responsive-image {
+        width: 100%;
+        height: auto;
+    }
+    .parallax-slider {
+        width: 100% !important;
+        height: 40vh !important;
+        /* Ajuste conforme necessário */
+        background-image: url("../images/canavarrosmobile.jpg") !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .responsive-image {
+        width: 100%;
+        height: auto;
+    }
+    .parallax-slider {
+        width: 100% !important;
+        height: 40vh !important;
+        /* Ajuste conforme necessário */
+        background-image: url("../images/canavarrosmobile.jpg") !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+}
+
 @media only screen and (max-width: 1300px) {
     .home-image-right {
         right: 5rem;
@@ -2016,6 +2076,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 @media only screen and (max-width: 1200px) {
     #home {
         overflow: hidden;
+        min-height: 700px;
     }
     .home-content {
         vertical-align: middle;
@@ -2033,7 +2094,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
         background-position: center !important;
     }
     .home-content-left {
-        padding: 18rem 0 12rem 40px;
+        padding: 40rem 0 0rem 40px;
     }
     .home-content-left h3 {
         font-size: 1.5rem;
@@ -2113,7 +2174,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 @media only screen and (max-width: 900px) {
     #home {
         height: auto;
-        min-height: 840px;
+        min-height: 550px;
     }
     .responsive-image {
         width: 100%;
@@ -2139,7 +2200,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
     .home-content-left {
         width: 94%;
         position: static;
-        padding: 19rem 6rem 366px;
+        padding: 45rem 6rem 366px;
         margin: 0 auto;
     }
     .home-content-left h1 {
@@ -2186,6 +2247,20 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
     }
     .home-content-left h1 {
         font-size: 3.6rem;
+    }
+    .imgProfissional {
+        width: 350px !important
+    }
+    .footer-social-list {
+        margin-top: 1.5rem !important;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .home-content-left {
+        padding: 27rem 6rem 366px;
     }
 }
 

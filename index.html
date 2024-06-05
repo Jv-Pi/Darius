@@ -204,10 +204,6 @@
                                 A partir das 10h de hoje (24), o contribuinte que entregou a Declaração do Imposto de Renda Pessoa Física até o fim de maio poderá acertar as contas com o Leão.<br> Nesse horário, a Receita Federal libera a consulta ao
                                 quarto dos cinco lotes de restituição de 2022. O lote também contempla restituições de anos anteriores.No próximo dia 31, a Receita depositará R$ 6 bilhões a 4.462.564 contribuintes.
                             </p>
-                            <div class="card-date">
-                                <p class="date">22-22-2222</p>
-                                <p class="date">33-33-3333</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -221,10 +217,6 @@
                             <p class="card-description">
                                 Ricardo Piedade, advogado tributarista e palestrante, é especialista em execuções fiscais. Ele oferece cursos e mentorias para advogados interessados em se especializar nesta área, abordando desde a Lei 6830/80 <br>até
                                 técnicas práticas para desbloqueio de contas bancárias e defesa de bens em execuções fiscais​ </p>
-                            <div class="card-date">
-                                <p class="date">22-22-2222</p>
-                                <p class="date">33-33-3333</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -239,10 +231,6 @@
                                 Muitos escritórios de advocacia especializados em direito tributário oferecem serviços de consultoria jurídica para ajudar empresas e indivíduos a se preparar e defender-se em casos de execução fiscal.<br> Esses serviços
                                 incluem análise de riscos, elaboração de defesas, e acompanhamento de processos administrativos e judiciais​
                             </p>
-                            <div class="card-date">
-                                <p class="date">22-22-2222</p>
-                                <p class="date">33-33-3333</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -253,15 +241,10 @@
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">Educação Continuada em Direito Tributário</h3>
-                            <a href="#" target="_blank">Link da Matéria</a>
                             <p class="card-description">
                                 Vários cursos e workshops são oferecidos por especialistas em direito tributário, focando em execuções fiscais. <br> Esses programas educativos são destinados a advogados que buscam se especializar na área, aprendendo desde
                                 os aspectos legais até as estratégias de defesa prática em execuções fiscais​
                             </p>
-                            <div class="card-date">
-                                <p class="date">22-22-2222</p>
-                                <p class="date">33-33-3333</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -279,13 +262,11 @@
             </div>
         </div>
         <div class="row about-intro">
-            <div class="col-four">
-                <div class="col-eight">
-                    <img class="imgProfissional" src="images/pic3.jpg" srcset="images/pic3.jpg 1x, images/pic3.jpg 2x" data-aos="fade-up">
-                    <br>
-                    <span><strong>Advogado Processual</strong></span><br>
-                    <span><strong>OAB/MT 7178-B</strong></span>
-                </div>
+            <div class="col-four" style="margin-top: 5rem;">
+                <img class="imgProfissional" src="images/pic3.jpg" srcset="images/pic3.jpg 1x, images/pic3.jpg 2x" data-aos="fade-up">
+                <br>
+                <span><strong>Advogado Processual</strong></span><br>
+                <span><strong>OAB/MT 7178-B</strong></span>
             </div>
             <div class="col-eight">
 
@@ -418,26 +399,22 @@
 
             <div class="col tab-full">
                 <h1>Contato</h1>
-                <form>
+                <form id="emailForm" style="display: contents;">
                     <div>
-                        <label for="sampleInput">Título do Assunto</label>
+                        <label for="subject">Título do Assunto</label>
                         <input class="full-width" type="text" placeholder="Name" id="subject">
                     </div>
                     <div>
-                        <label for="sampleInput">Para</label>
-                        <input class="full-width" type="text" placeholder="Canavarros Palma Advocacia" id="to" disabled value="Canavarros Palma Advocacia">
-                    </div>
-                    <div>
-                        <label for="sampleInput">Nome</label>
+                        <label for="sendername">Nome</label>
                         <input class="full-width" type="text" placeholder="Nome" id="sendername">
                     </div>
-                    <label for="exampleMessage">Mensagem</label>
-                    <textarea class="full-width" placeholder="Sua Mensagem" id="message"></textarea>
-                    </label>
-
-                    <input class="button-primary" onclick="sendEmail()" type="submit" value="Enviar">
-
+                    <div>
+                        <label for="message">Mensagem</label>
+                        <textarea class="full-width" placeholder="Sua Mensagem" id="message"></textarea>
+                    </div>
+                    <input class="button-primary" type="submit" value="Enviar">
                 </form>
+                <div id="confirmation" class="message"></div>
             </div>
         </div>
     </section>
@@ -586,58 +563,6 @@
                     }
                 }
             });
-        });
-        document.addEventListener("DOMContentLoaded", function() {
-            function changeImageSource() {
-                var parallaxSection = document.getElementById('home');
-                var parallaxImages = document.getElementsByClassName('parallax-image');
-
-                if (!parallaxSection) {
-                    console.error("Elemento com o ID 'home' não encontrado.");
-                    return;
-                }
-
-                if (parallaxImages.length === 0) {
-                    console.error("Elementos com a classe 'parallax-image' não encontrados.");
-                    return;
-                }
-
-                var parallaxImage = parallaxImages[0];
-
-                console.log("Largura da janela: " + window.innerWidth);
-
-                if (window.innerWidth <= 500) {
-                    parallaxSection.setAttribute('data-image-src', 'images/canavarrosmobile-500.jpg');
-                    parallaxImage.src = 'images/canavarrosmobile-500.jpg';
-                    console.log("Imagem de fundo alterada para a versão móvel (500px).");
-                } else if (window.innerWidth <= 600) {
-                    parallaxSection.setAttribute('data-image-src', 'images/canavarrosmobile-600.jpg');
-                    parallaxImage.src = 'images/canavarrosmobile-600.jpg';
-                    console.log("Imagem de fundo alterada para a versão móvel (600px).");
-                } else if (window.innerWidth <= 900) {
-                    parallaxSection.setAttribute('data-image-src', 'images/canavarrosmobile-900.jpg');
-                    parallaxImage.src = 'images/canavarrosmobile-900.jpg';
-                    console.log("Imagem de fundo alterada para a versão móvel (900px).");
-                } else if (window.innerWidth <= 1300) {
-                    parallaxSection.setAttribute('data-image-src', 'images/canavarrosmobile-1300.jpg');
-                    parallaxImage.src = 'images/canavarrosmobile-1300.jpg';
-                    console.log("Imagem de fundo alterada para a versão móvel (1300px).");
-                } else {
-                    parallaxSection.setAttribute('data-image-src', 'images/hero-bg2.jpg');
-                    parallaxImage.src = 'images/hero-bg2.jpg';
-                    console.log("Imagem de fundo alterada para a versão desktop.");
-                }
-
-                // Atualiza o background-image do parallaxSection usando o atributo data-image-src
-                var imageUrl = parallaxSection.getAttribute('data-image-src');
-                parallaxSection.style.backgroundImage = 'url(' + imageUrl + ')';
-            }
-
-            // Execute a função quando a página carregar
-            changeImageSource();
-
-            // Execute a função quando a janela for redimensionada
-            window.onresize = changeImageSource;
         });
     </script>
     <script>

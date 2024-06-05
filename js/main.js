@@ -7,10 +7,9 @@
   "use strict";
 
   var cfg = {
-      scrollDuration: 800, // smoothscroll duration
-      mailChimpURL:
-        "https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc", // mailchimp url
-    },
+    scrollDuration: 800, // smoothscroll duration
+    mailChimpURL: "https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc", // mailchimp url
+  },
     $WIN = $(window);
 
   // Add the User Agent to the <html>
@@ -115,10 +114,9 @@
 
       $("html, body")
         .stop()
-        .animate(
-          {
-            scrollTop: $target.offset().top,
-          },
+        .animate({
+          scrollTop: $target.offset().top,
+        },
           cfg.scrollDuration,
           "swing",
           function () {
@@ -252,42 +250,48 @@ document.getElementById("mc-form").addEventListener("submit", function (event) {
     }
   );
 });
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("emailForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form from submitting the traditional way
+    var sendername = document.getElementById("sendername").value;
+    var subject = document.getElementById("subject").value;
+    var message = document.getElementById("message").value;
+    var params = {
+      sendername: sendername,
+      to: "joaotei7@hotmail.com",
+      subject: subject,
+      message: message,
+    };
 
-function sendEmail() {
-  var params = {
-    sendername: $("#sendername").val(),
-    to: "joaotei7@hotmail.com",
-    subject: $("#subject").val(),
-    replyto: $("#replyto").val(),
-    message: $("#message").val(),
-  };
-  var serviceID = "service_e6esy8t";
-  var templateID = "template_kt0nj3f";
-
-  emailjs
-    .send(serviceID, templateID, params)
-    .then((res) => {
-      alert("Email enviado com sucesso");
-    })
-    .catch((err) => {
-      console.error("Erro ao enviar email:", err);
-      alert("Falha ao enviar email. Por favor, tente novamente.");
-    });
-}
-
+    var confirmationElement = $("#confirmation");
+    if (sendername === "" || subject === "" || message === "") {
+      confirmationElement.eq(0).html("Todos os campos devem ser preenchidos.")
+      return;
+    }
+    var serviceID = "service_e6esy8t";
+    var templateID = "template_kt0nj3f";
+    emailjs.send(serviceID, templateID, params).then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+        confirmationElement.eq(0).html("Obrigado por enviar a Mensagem!");
+      },
+      function (error) {
+        console.error("FAILED...", error);
+        confirmationElement.eq(0).html("Ocorreu um erro ao enviar seu e-mail.");
+      }
+    );
+  });
+});
 $(".contagem").each(function () {
   $(this)
     .prop("Counter", 0)
-    .animate(
-      {
-        Counter: $(this).text(),
+    .animate({
+      Counter: $(this).text(),
+    }, {
+      duration: 5000,
+      easing: "swing",
+      step: function (now) {
+        $(this).text(Math.ceil(now));
       },
-      {
-        duration: 5000,
-        easing: "swing",
-        step: function (now) {
-          $(this).text(Math.ceil(now));
-        },
-      }
-    );
+    });
 });
